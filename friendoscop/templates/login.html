@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+
+{% block title %}Connexion{% endblock  %}
+
+{% block headerContent %}
+    <div class="flex items-center">
+        <img src="static/img/logo.png">
+        <h1 class="-ml-5 text-xl md:text-2xl tracking-wider font-light">Friendoscop</h1>
+    </div>
+{% endblock  %}
+
+{% block content %}
+    <form action="login" method="post" class="bg-transparent min-w-[300px] p-10 rounded-lg border-box">
+        {% csrf_token %}
+        {{form.as_p}}
+        <style>
+            .errorlist {
+                color: #dc2626; 
+                font-size: 0.875rem;
+            }
+            .errorlist li {
+                margin-top: 0.25rem;
+            }
+        </style>
+        <p class="grid grid-cols-1 gap-5 text-center pt-5">
+            <input class="px-1 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700" type="submit" value="Se connecter">
+            <a class="text-blue-700" href="">Créer un compte</a>
+        </p>
+    </form>
+{% endblock  %}

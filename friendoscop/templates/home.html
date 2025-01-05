@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block headerContent %}
+    <div>
+        <div class="flex items-center">
+            <img src="static/img/logo.png">
+            <h1 class="-ml-5 text-xl md:text-2xl tracking-wider font-light">
+                Mike Pascal
+                <br>
+                <span class="text-sm">Étudiant 2ieme année de Médicine</span>
+            </h1>
+        </div>
+    </div>
+{% endblock  %}
+
+{% block content %}
+    <div>
+        <h1>Bienvenue sur Friendoscop!</h1>
+        <em>{{current_datetime}}</em>
+    </div>
+{% endblock %}

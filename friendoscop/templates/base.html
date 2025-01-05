@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friendoscop - {% block title%}Bienvenue{% endblock %}</title>
+    <title>Friendoscop - {% block title %}Bienvenue{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body id="">
-    
+<body id='{% block bodyId %}genericPage{% endblock %}'>
+    <header class="bg-gray-900 text-white px-4">
+        {% block headerContent %}{% endblock %}
+    </header>
+    <section class="p-4 flex items-center justify-center">
+        {% block content %}{% endblock  %}
+    </section>
 </body>
 </html>
